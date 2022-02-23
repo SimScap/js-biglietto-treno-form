@@ -11,29 +11,40 @@
     <title>Biglietto del treno Form</title>
 </head>
 <body>
-    <main class="bg-dark position-relative">
-        <div class="my-container text-center">
+    <main class="bg-dark text-center">   
             <span class="text-success fs-1">Boo</span>
             <span class="text-secondary fs-1">lit</span>
             <span class="text-danger fs-1">alia</span>
             <div class="container p-5 bg-light border rounded ">
-                <div class="row  text-center">
-                    <div class="col-12 col-md-4 border border-primary rounded border-4 mb-3 p-1">
-                        <label for="nome-cognome" class="fw-bold">Nome e Cognome</label>
+                <div class="row justify-content-evenly text-center">
+                    <div class="col-12 fw-bold mb-5 bg-info"><h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2></div>
+                    <div class="col-12 col-md-3 border border-primary rounded border-4 mb-3 p-1">
+                        <label for="nome-cognome" class="fw-bold text-center">Nome e Cognome</label>
                         <input id="nome-cognome" class="w-100"  type="text" placeholder="Inserisci Nome e Cognome">                                           
                     </div>
-                    <div class="col-12 col-md-4 border border-primary rounded border-4  mb-3 p-1">
+                    <div class="col-12 col-md-3 border border-primary rounded border-4  mb-3 p-1">
                         <label class="fw-bold" for="kilometri">Km da percorrere</label>
                         <input id="kilometri" class="w-100"  type="text"> 
                     </div>
+                    <div class="col-12 col-md-3 border border-primary rounded border-4 mb-3 p-1">
+                        <label class="fw-bold w-100" for="kilometri">Fascia d'età</label>
+                        <select id="eta-utente">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
                     <div class="col-12 border border-warning rounded border-4 p-1">
-                        <h6 class="fw-bold">Costo del biglietto:</h6>
-                        <p id="costo"></p>   
-                        <button class="btn btn-danger rounded-pill5">Acquista</button>   
+                        <button class="btn btn-danger rounded-pill5 mx-3">Genera</button> 
+                        <button class="btn btn-danger rounded-pill5">Annulla</button>  
                     </div>
                 </div>
+            </div>     
+        <h3 class="text-white text-center">IL TUO BIGLIETTO</h3>
+            <div class="container bg-white">
+                
+
             </div>
-        </div>    
     </main>
     
 </body>

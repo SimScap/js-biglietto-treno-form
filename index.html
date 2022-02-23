@@ -18,15 +18,15 @@
             <div class="container p-5 bg-light border rounded ">
                 <div class="row justify-content-evenly text-center">
                     <div class="col-12 fw-bold mb-5 bg-info"><h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2></div>
-                    <div class="col-12 col-md-3 border border-primary rounded border-4 mb-3 p-1">
+                    <div class="col-12 col-md-3 border border-primary rounded border-4 mb-5 p-1">
                         <label for="nome-cognome" class="fw-bold text-center">Nome e Cognome</label>
                         <input id="nome-cognome" class="w-100"  type="text" placeholder="Inserisci Nome e Cognome">                                           
                     </div>
-                    <div class="col-12 col-md-3 border border-primary rounded border-4  mb-3 p-1">
+                    <div class="col-12 col-md-3 border border-primary rounded border-4  mb-5 p-1">
                         <label class="fw-bold" for="kilometri">Km da percorrere</label>
                         <input id="kilometri" class="w-100"  type="text"> 
                     </div>
-                    <div class="col-12 col-md-3 border border-primary rounded border-4 mb-3 p-1">
+                    <div class="col-12 col-md-3 border border-primary rounded border-4 mb-5 p-1">
                         <label class="fw-bold w-100" for="kilometri">Fascia d'età</label>
                         <select id="eta-utente">
                             <option value="minorenne">Minorenne</option>
@@ -35,17 +35,40 @@
                         </select>
                     </div>
                     <div class="col-12 border border-warning rounded border-4 p-1">
-                        <button class="btn btn-danger rounded-pill5 mx-3">Genera</button> 
-                        <button class="btn btn-danger rounded-pill5">Annulla</button>  
+                        <button id="genera" class="btn btn-danger rounded-pill5 mx-3">Genera</button> 
+                        <button id="annulla" class="btn btn-danger rounded-pill5">Annulla</button>  
                     </div>
                 </div>
             </div>     
         <h3 class="text-white text-center">IL TUO BIGLIETTO</h3>
             <div class="container bg-white">
-                
-
+                <div class="row">
+                        <h5 class="text-start">DETTAGLIO PASSEGGERI</h5>
+                    <div class="col-4">                       
+                        <div class="bg-secondary h-75 py-3">
+                            <h5>NOME PASSEGGERO</h5>
+                            <p id="nome-passeggero"></p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <table>
+                            <tr>
+                                <th>Offerta</th>
+                                <th>Carrozza</th>
+                                <th>Codice CP</th>
+                                <th>Costo Biglietto</th>
+                            </tr>
+                            <tr>
+                                <td id="offerta">f</td>
+                                <td id="carrozza">f</td>
+                                <td id="codice-cp">f</td>
+                                <td id="costo-biglietto">f</td>
+                            </tr>
+                        </table>               
+                    </div>
+                </div>
             </div>
     </main>
-    
+    <script type="text/javascript" src="js/main.js"></script>   
 </body>
 </html>

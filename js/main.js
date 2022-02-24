@@ -17,15 +17,29 @@ generaButton.addEventListener('click', function(){
     const prezzoKm = 0.27;
     let prezzoSenzaSconto = prezzoKm * distanza;
 
-    if (eta == "minorenne"){((prezzoSenzaSconto / 100) * 83);
+    if (eta == "minorenne"){
+        prezzoSenzaSconto = prezzoSenzaSconto - prezzoSenzaSconto * 0.17;
     }
-    else if (eta == "over65"){((prezzoSenzaSconto / 100) * 67);
+    else if (eta == "over65"){
+        prezzoSenzaSconto = prezzoSenzaSconto - prezzoSenzaSconto * 0.33;
     }
-    else{(prezzoSenzaSconto);
-    }
+
     document.getElementById('nome-passeggero').innerHTML = nomeCognome;
     document.getElementById('costo-biglietto').innerHTML = prezzoSenzaSconto.toFixed(2);
     document.getElementById('carrozza').innerHTML = carrozza;
     document.getElementById('codice-cp').innerHTML = codiceCp;
 
 });
+
+var annullaButton = document.getElementById('annulla');
+annullaButton.addEventListener( 'click',
+    function() {
+    document.getElementById('nome-passeggero').innerHTML = '';
+    document.getElementById('costo-biglietto').innerHTML = '';
+    document.getElementById('carrozza').innerHTML = '';
+    document.getElementById('codice-cp').innerHTML = '';
+    document.getElementById('kilometri').value = '';
+    document.getElementById("eta-utente").value = '';
+    document.getElementById("nome-cognome").value = '';
+}
+);
